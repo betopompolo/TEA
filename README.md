@@ -1,1 +1,1 @@
-# TEA
+# Tópicos Avançados de Inteligência Artificial (TEA)
