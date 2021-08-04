@@ -2,12 +2,14 @@ import numpy as np
 
 Point = list[float, float]
 Clusters = dict[int, list[Point]]
+Centroids = dict[int, Point]
+Dataset = list[Point]
 
 
 class KMeans:
     def __init__(self, n_clusters=2, max_iter=300, tol=0.001):
         self.n_clusters = n_clusters
-        self.centroids: dict[int, Point] = {}
+        self.centroids: Centroids = {}
         self.max_iter = max_iter
         self.tol = tol
 
@@ -39,12 +41,13 @@ class KMeans:
             else:
                 self.centroids = new_centroids
 
-    def predict(self, dataset: list[Point]):
-        predictions = []
+    def predict(self, dataset: list[Point]) -> Clusters:
+        predictions = self.__create_clusters()
+
         for data in dataset:
             distances = [euclidean_dist(data, self.centroids[centroid]) for centroid in self.centroids]
             cluster_index = distances.index(min(distances))
-            predictions.append(cluster_index)
+            predictions[cluster_index].append(data)
 
         return predictions
 
