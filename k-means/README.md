@@ -1,17 +1,17 @@
 # K-Means
 Implemetação em Python do algoritmo k-means.
 
-Para essa implementação, foi utilizada a base de dados Iris,
-disponível na biblioteca sklearn. A versão do sklearn foi escolhida,
-em detrimento da versão do repositório da UC Irvine (UCI) pois,
-segundo a [página do sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html?highlight=iris%20dataset#sklearn.datasets.load_iris), 
-algumas entradas da base de dados de UCI estão incorretas.
+Para essa implementação, foram utilizadas as seguintes bases de dados:
++ [Iris](https://archive.ics.uci.edu/ml/datasets/Iris)
++ [Wine](https://archive.ics.uci.edu/ml/datasets/Wine)
++ [Breast Cancer](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29)
 
-Por fim, foram utilizadas as seguintes bibliotecas:
+Por fim, as seguintes bibliotecas foram utilizadas:
 + **Numpy** para operações matemáticas como multiplicação de matrizes
-+ **Pandas** para manipulação de bases de dados
-+ **Sklearn** tanto para importação da base de dados, quanto para 
-validação da presente implementação do k-means 
++ **Sklearn** para importação das bases de dados
 
 ## Resultados
-// TODO
+Abaixo, seguem os resultados gerados pela presente implementação do k-means
+![Resultado do kmeans utilizando o dataset Iris](results/iris.png)
+![Resultado do kmeans utilizando o dataset Wine](results/wine.png)
+![Resultado do kmeans utilizando o dataset Breast Cancer](results/breast_cancer.png)
